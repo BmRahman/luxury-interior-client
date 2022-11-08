@@ -1,0 +1,10 @@
+.header{
+    color: #ffff;
+}
+.header .log{
+    background-color: #EC6090;
+    color: #ffff;
+}
+.header .log:hover{
+    background-color: #6419E6;
+}

@@ -1,0 +1,65 @@
+[
+    {
+        "title": "Residential Interior",
+        "image": "https://www.essentialhome.eu/inspirations/wp-content/uploads/2020/08/Step-Inside-The-Room-Studios-Trendy-Residential-Design-That-Is-All-About-The-Neutrals-capa-740x560.jpg",
+        "price": 200,
+        "details": "Residential interior design refers to the designing of people's homes as opposed to commercial property. The object of these designers is to create interiors that fit the functioning of clients' homes, but also reflect each client's personal taste. A home is a personal space and excellent residential interior design personalizes the designs of homes.",
+        "rating": 4.5
+    },
+    {
+        "title": "Office Interior",
+        "image": "https://img.freepik.com/premium-photo/modern-office-interior-with-big-wooden-table_93675-113009.jpg",
+        "price": 300,
+        "details": "Modern office design goes hand-in-hand with modern workplace culture. Creativity, collaboration and productivity thrive when employees are comfortable in their space. As more companies shift toward remote and hybrid work, the traditional cubicle maze setup is vanishing, making way for multi-purpose common areas, a focus on incorporating natural elements, utilizing wall space and more.",
+        "rating": 4.5
+    },
+    {
+        "title": "Restuarants & Cafeteria",
+        "image": "https://media.istockphoto.com/id/1159992039/photo/cozy-restaurant-for-gathering-with-friends.jpg?s=612x612&w=0&k=20&c=FTnWMb2J9lI7M6Q06xlCDBwDq291PbNeU_YwcnzH9f0=",
+        "price": 250,
+        "details": "To offer a truly immersive dining experience, let your guests indulge more than just their taste buds the next time they visit your restaurant. Whip up a feast for the eyes with restaurant interior design that wows your customers, while building brand recognition and loyalty. The best restaurant interior design creates an atmosphere thats an extension of your brand and allows you to make a powerful first impression.",
+        "rating": 4.5
+    },
+    {
+        "title": "Retail Shop & Showroom",
+        "image": "https://i.pinimg.com/originals/df/f3/a9/dff3a9b408c84f7d5688c03df74cf97a.jpg",
+        "price": 400,
+        "details": "When asking yourself, “What is a showroom?” you may envision window-shopping for products. A retail showroom isnt far from that vision, but it also allows customers to test, try and examine merchandise in-person, while the final purchase transaction often takes place online. The showroom model gives customers the opportunity to inspect products and get to know them better before committing to a purchase online.",
+        "rating": 4.5
+    },
+    {
+        "title": "High Tech Home Automation System",
+        "image": "https://www.alarmalertsc.com/images/home-automation-home-automation-control.jpg",
+        "price": 700,
+        "details": "Hi-Tech Home offers a completely connected system enabling seamless automation across your security, video and energy management systems. Now your home can adjust automatically to you.We Do Hi-Tech Interior Designing And Smart Interior Solution Like Fully Tech Powered Home Automation System And Other Technological Accessories, Which Will Make Your Life At Ease In Your Home. We Do Voice Control And Gesture Control System In Your Home So That You Can Get The Real Taste Of Luxury.",
+        "rating": 4.5
+    },
+    {
+        "title": "Glass & Lightening",
+        "image": "https://cdn.shopify.com/s/files/1/1740/3161/products/lanterns-lighting-lamp-pendant-amber-cut-glass-decanter-set-of-4-2_600x.jpeg?v=1625616015",
+        "price": 250,
+        "details": "We have extensive experience in designing and producing new products according to the specifications we receive. Our extensive experience with custom orders has helped us to realize that there are no impossible requests, thus we ask those who might be interested in our products not to limit themselves to the items shown in our catalogs: we are pleased to develop and produce alternative solutions.",
+        "rating": 4.5
+    },
+    {
+        "title": "False Ceiling",
+        "image": "https://i.pinimg.com/736x/83/14/bb/8314bbb2c4f605ed9c733632550924c4.jpg",
+        "price": 350,
+        "details": "false ceiling refers to a mock roofing feature that aims at enhancing the aesthetic appeal of an architectural structure. Simply put, in other words, a false ceiling is a secondary ceiling that is constructed below the original ceiling and is held into place by metal or wooden frames- a true fifth wall. this feature has rapidly become an integral part of modern construction and finds incorporation in both residential as well as commercial buildings.",
+        "rating": 4.5
+    },
+    {
+        "title": "Flooring",
+        "image": "https://newzz.in/wp-content/uploads/2021/12/2021-Hotel-Industry-Design-Trends_04-750x500-1.jpeg",
+        "price": 250,
+        "details": "A beautiful new floor can transform any room, the right choice will perfectly complement your home. Traditional or modern, rustic or contemporary, youre sure to find a colour and design to suit your home and budget here at Wickes, Whether it's laminate, vinyl, engineered or solid wood, we have an array of styles to suit your requirements.",
+        "rating": 4.5
+    },
+    {
+        "title": "Wallpaper & Painting",
+        "image": "https://www.colourdrive.in/auth2/assets/uploads/designs/wallpapers/04c11-image-5-2-.png",
+        "price": 200,
+        "details": "Once your old wallpaper is removed, you might want a fresh new design for your walls. Luxury Interiors® offers wallpaper installation services as well as removal, meaning we coordinate all aspects of the remodel for a quick and seamless experience. Our professional wallpaper installers deliver exceptional results every time, so you are sure that your ideas and designs are in safe hands.",
+        "rating": 4.5
+    }
+]
