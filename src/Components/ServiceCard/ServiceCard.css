@@ -1,0 +1,17 @@
+.card{
+    border: 1px solid #EC6090;
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: black;
+}
+.card img{
+    height: 300px;
+}
+.view{
+    background-color: #EC6090;
+    color: #ffff;
+}
+.view:hover{
+    background-color: #6419E6;
+}

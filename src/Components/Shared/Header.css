@@ -1,5 +1,7 @@
 .header{
     color: #ffff;
+    position: sticky;
+    top: 0%;
 }
 .header .log{
     background-color: #EC6090;
@@ -8,3 +10,4 @@
 .header .log:hover{
     background-color: #6419E6;
 }
+

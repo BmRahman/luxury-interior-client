@@ -1,0 +1,18 @@
+.ban-name{
+    color: #ffff;
+}
+.ban-head{
+    color: #ffff;
+}
+.ban-details{
+    color: #ffff;
+}
+.started{
+    background-color: #E15D8A;
+    border: 1px solid #E15D8A;
+    color: #ffff;
+}
+.started:hover{
+    background-color: #6419E6;
+    border: 1px solid #6419E6;
+}
