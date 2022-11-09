@@ -30,7 +30,6 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'servicelimit',
-                loader: () => fetch('http://localhost:5000/servicelimit'),
                 element: <ServiceLimit></ServiceLimit>
             },
             {

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 const LimitCard = ({limit}) => {
     const {image, price, rating, title, _id} = limit;
-    console.log(limit)
     return (
         <div>
             <div className="card w-96 shadow-xl">
