@@ -40,8 +40,8 @@ const Header = () => {
     </ul>
   </div>
   <div className="navbar-end hidden lg:flex">
-    <button className='btn log mr-3'>Login</button>
-    <button className='btn log'>Sign Up</button>
+    <Link to='/login'><button className='btn log mr-3'>Login</button></Link>
+    <Link to='/register'><button className='btn log'>Sign Up</button></Link>
   </div>
 </div>
 
