@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Contexts/AuthProvider';
 import './Header.css'
 
 const Header = () => {
+    const {user, userLogout} = useContext(AuthContext);
+
+    const handleLogout = () => {
+      userLogout()
+    }
+
 
     const menuItems = 
         <>
         <li className='font-semibold'> <Link to='/home'>Home</Link> </li>
         <li className='font-semibold'> <Link to='/services'>Services</Link> </li>
+        <li className='font-semibold'> <Link to='/addservice'>Add Service</Link> </li>
+        {/* <li className='font-semibold'> <Link to='/servicelimit'>Service Limit</Link> </li> */}
         </>
 
     return (
@@ -25,8 +34,13 @@ const Header = () => {
         }
 
         <div className="navbar-end">
-            <li><button className='btn log mr-3 mt-2'>Login</button></li>
-            <li><button className='btn log mt-2'>Sign Up</button></li>
+        {
+          user?.email ? <button onClick={handleLogout} className='btn log'>Log Out</button> :
+          <>
+          <Link to='/login'><button className='btn log mr-3'>Login</button></Link>
+          <Link to='/register'><button className='btn log'>Sign Up</button></Link>
+          </>
+        }
         </div>
       </ul>
     </div>
@@ -40,8 +54,13 @@ const Header = () => {
     </ul>
   </div>
   <div className="navbar-end hidden lg:flex">
-    <Link to='/login'><button className='btn log mr-3'>Login</button></Link>
-    <Link to='/register'><button className='btn log'>Sign Up</button></Link>
+    {
+      user?.email ? <button onClick={handleLogout} className='btn log'>Log Out</button> :
+      <>
+      <Link to='/login'><button className='btn log mr-3'>Login</button></Link>
+      <Link to='/register'><button className='btn log'>Sign Up</button></Link>
+      </>
+    }
   </div>
 </div>
 
