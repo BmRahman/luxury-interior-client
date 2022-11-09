@@ -13,6 +13,7 @@ const ServiceLimit = () => {
     }, [])
     return (
        <div>
+            <h1 className='text-3xl lg:text-5xl text-center my-5 lg:my-12 text-white font-bold'>My Services</h1>
              <div className='grid grid-cols-1 lg:grid-cols-3 gap-5 box my-10'>
             {
                 limitService.map(limit => <LimitCard key={limit._id} limit={limit}></LimitCard>)

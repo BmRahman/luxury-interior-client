@@ -1,5 +1,5 @@
 import React from 'react';
-import { json } from 'react-router-dom';
+import './AddService.css';
 
 const AddService = () => {
 
@@ -28,7 +28,8 @@ const AddService = () => {
 
     return (
         <div>
-            <form onSubmit={handleUpload}>
+          <h1 className='text-center text-3xl lg:text-5xl my-5 mb-5 lg:my-12 lg:mb-12 font-bold text-white'>Add Your Preferred Service Here</h1>
+            <form onSubmit={handleUpload} className='w-full lg:w-4/5 mx-auto my-12 mb-12 add-service'>
             <div className="form-control">
           <label className="label">
             <span className="label-text">Title</span>
@@ -62,7 +63,7 @@ const AddService = () => {
         
 
         <div className="form-control mt-6">
-          <button type='submit' className="btn btn-primary">Add Service</button>
+          <button type='submit' className="btn w-full lg:w-2/5 mx-auto">Add Service</button>
         </div>
             </form>
         </div>

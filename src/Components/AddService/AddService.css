@@ -1,0 +1,12 @@
+.add-service{
+    padding: 30px;
+    border: 1px solid #EC6090;
+    border-radius: 20px;
+}
+.add-service .btn{
+    background-color: #EC6090;
+    color: #ffff;
+}
+.add-service .btn:hover{
+    background-color: #6419E6;
+}
