@@ -9,6 +9,7 @@ import Register from '../Components/Register/Register';
 import ServiceLimit from '../Components/ServiceLimit/ServiceLimit';
 import AddService from '../Components/AddService/AddService';
 import PrivateRoute from './PrivateRoute';
+import Review from '../Components/Review/Review';
 
 export const router = createBrowserRouter([
     {
@@ -35,6 +36,11 @@ export const router = createBrowserRouter([
             {
                 path: 'addservice',
                 element: <PrivateRoute> <AddService></AddService> </PrivateRoute>
+            },
+            {
+                path: '/review/:id',
+                loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`),
+                element: <Review></Review>
             },
             {
                 path: '/services/:id',
