@@ -4,13 +4,14 @@ import './Register.css';
 import { Link } from 'react-router-dom';
 
 const Register = () => {
-    const {userCreate} = useContext(AuthContext);
+    const {userCreate, updateUserProfile} = useContext(AuthContext);
     const [passwordError, setPasswordError] = useState('')
 
     const handleRegister = (event) => {
         event.preventDefault();
         const form = event.target;
         const name = form.name.value;
+        const photoURL = form.image.value;
         const email = form.email.value;
         const password = form.password.value;
         const confirm = form.confirm.value;
@@ -25,13 +26,26 @@ const Register = () => {
             const user = result.user;
             form.reset()
             setPasswordError('')
+            handleUserProfile(name, photoURL)
             console.log(user)
           })
           .catch(err => {
             console.error(err)
           })
           }
+
+          const handleUserProfile = (name, photoURL) => {
+              const profile = {
+                displayName: name,
+                photoURL: photoURL
+              }
+              updateUserProfile(profile)
+              .then(() => {})
+              .catch(err => console.error(err))
+          }
     }
+
+    
 
     return (
         <div className='my-10 lg:mb-20'>
@@ -43,6 +57,12 @@ const Register = () => {
             <span className="label-text">Name</span>
           </label>
           <input type="text" name='name' placeholder="your name" className="input input-bordered" />
+        </div>
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text">photoURL</span>
+          </label>
+          <input type="text" name='image' placeholder="photourl" className="input input-bordered" />
         </div>
         <div className="form-control">
           <label className="label">

@@ -56,7 +56,7 @@ const Header = () => {
   </div>
   <div className="navbar-end hidden lg:flex">
     {
-      user?.email ? <button onClick={handleLogout} className='btn log'>Log Out</button> :
+      user?.email || user?.uid ? <button onClick={handleLogout} className='btn log'>Log Out</button> :
       <>
       <Link to='/login'><button className='btn log mr-3'>Login</button></Link>
       <Link to='/register'><button className='btn log'>Sign Up</button></Link>
