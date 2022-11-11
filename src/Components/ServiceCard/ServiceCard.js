@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './ServiceCard.css'
+import { PhotoProvider, PhotoView } from 'react-photo-view';
 
 const ServiceCard = ({service}) => {
 
@@ -9,7 +10,9 @@ const ServiceCard = ({service}) => {
     return (
         <div>
             <div className="card w-96 shadow-xl">
-                <figure><img src={image} alt="Service" /></figure>
+                <figure><PhotoProvider>
+                    <img src={image} alt="Service" />                   
+                    </PhotoProvider></figure>
                     <div className="card-body">
                     <h2 className="card-title">{title}</h2>
                     <div className='flex justify-between mb-5'>

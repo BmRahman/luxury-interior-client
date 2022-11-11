@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
+import RevCard from '../ViewReview/RevCard/RevCard';
 import './Service.css';
 
 const Service = () => {
@@ -7,18 +8,13 @@ const Service = () => {
     const serviceData = useLoaderData()
     const {image, title, _id, details, price, rating} = serviceData;
 
-    const [filteredReview, setFilteredReview] = useState([])
+    const [showReview, setShowReview] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews/${_id}`)
+        fetch('http://localhost:5000/reviews')
         .then(res => res.json())
-        .then(data => {
-            const remaining = filteredReview.filter(fil => fil._id === _id)  
-            setFilteredReview(remaining)
-        })
+        .then(data => setShowReview(data))
     }, [])
-
-    console.log(filteredReview)
 
     return (
         <div className='my-10 mb-10'>
@@ -42,12 +38,22 @@ const Service = () => {
                 </div>
             </div>
         </div> 
+            
 
+            <div>
+            <h1 className='text-3xl lg:text-4xl text-center my-5 lg:my-12 text-white font-bold'>Client Reviews about this Product</h1>
 
-        <div className='my-10'>
-            <h2 className='text-center text-4xl my-10 mb-10'>Client Reviews about this Service</h2>
-
+<div className='grid grid-cols-1 lg:grid-cols-3 gap-5 box my-10'>
+    {
+        showReview.map(revShow => <RevCard key={revShow._id} revShow={revShow}></RevCard>)
+    }
+</div>
+        <div className='text-center'>
+            <Link to={`/review/${_id}`}><button className='btn btn-primary mt-10'>Give Us A Review</button></Link>
         </div>
+            </div>
+
+
         </div>
     );
 };

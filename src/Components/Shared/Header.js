@@ -15,8 +15,18 @@ const Header = () => {
         <>
         <li className='font-semibold'> <Link to='/home'>Home</Link> </li>
         <li className='font-semibold'> <Link to='/services'>Services</Link> </li>
-        <li className='font-semibold'> <Link to='/addservice'>Add Service</Link> </li>
-        <li className='font-semibold'> <Link to='/myreviews'>My Reviews</Link> </li>
+        <li className='font-semibold'> <Link to='/blog'>Blog</Link> </li>
+        {
+          user?.email || user?.uid ? 
+          <li className='font-semibold'> <Link to='/addservice'>Add Service</Link> </li>
+          : ""
+        }
+        {
+          user?.email || user?.uid ? 
+          <li className='font-semibold'> <Link to='/myreviews'>My Reviews</Link> </li>
+          : ""
+        }
+        
         {/* <li className='font-semibold'> <Link to='/servicelimit'>Service Limit</Link> </li> */}
         </>
 
