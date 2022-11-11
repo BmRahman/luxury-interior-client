@@ -17,6 +17,7 @@ const Service = () => {
         .then(data => setShowReview(data))
     }, [])
 
+
     return (
         <div className='my-10 mb-10'>
            <div className="card w-full lg:w-4/5 mx-auto shadow-xl">
