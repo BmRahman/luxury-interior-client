@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import './Service.css';
 
@@ -7,6 +7,18 @@ const Service = () => {
     const serviceData = useLoaderData()
     const {image, title, _id, details, price, rating} = serviceData;
 
+    const [filteredReview, setFilteredReview] = useState([])
+
+    useEffect(() => {
+        fetch(`http://localhost:5000/reviews/${_id}`)
+        .then(res => res.json())
+        .then(data => {
+            const remaining = filteredReview.filter(fil => fil._id === _id)  
+            setFilteredReview(remaining)
+        })
+    }, [])
+
+    console.log(filteredReview)
 
     return (
         <div className='my-10 mb-10'>
@@ -30,6 +42,12 @@ const Service = () => {
                 </div>
             </div>
         </div> 
+
+
+        <div className='my-10'>
+            <h2 className='text-center text-4xl my-10 mb-10'>Client Reviews about this Service</h2>
+
+        </div>
         </div>
     );
 };

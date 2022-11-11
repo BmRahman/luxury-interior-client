@@ -38,8 +38,8 @@ const Review = () => {
         .then(data => {
             console.log(data)
             if(data.acknowledged){
+                alert('review succesfully posted')
                 form.reset()
-                
             }
         })
         .catch(err => console.error(err))
@@ -50,7 +50,7 @@ const Review = () => {
         <div>
             <ToastContainer position="top-center" autoClose={3000}></ToastContainer>
           <h2 className='text-2xl lg:text-4xl text-center font-bold font-white my-12 mb-12'>Give us a review on {title} service</h2>
-          <form className='w-full lg:w-3/5 mx-auto' onSubmit={handleSubmitReview}>
+          <form className='w-full lg:w-3/5 mx-auto h-screen' onSubmit={handleSubmitReview}>
           <input type="text" name='name' placeholder="Your name" className="input input-secondary input-bordered w-full mb-6" required/> <br/>
 
           <input type="email" name='email' defaultValue={user?.email} placeholder="Email" className="input input-secondary input-bordered w-full mb-6" readOnly/> <br/>
