@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
+import React, { useContext, useEffect, useState } from 'react';
+import { Link, Navigate, useLoaderData } from 'react-router-dom';
+import { AuthContext } from '../../Contexts/AuthProvider';
 import RevCard from '../ViewReview/RevCard/RevCard';
 import './Service.css';
 
 const Service = () => {
-
+    const {user} = useContext(AuthContext);
     const serviceData = useLoaderData()
     const {image, title, _id, details, price, rating} = serviceData;
 
@@ -34,7 +35,10 @@ const Service = () => {
                         </div>
                     </div>
     <               div className="card-actions justify-end">
-                    <Link to={`/review/${_id}`}><button className="btn view">Give a review</button></Link>
+                    {
+                        user?.email ? <Link to={`/review/${_id}`}><button className="btn view">Give a review</button></Link>
+                        : <Link to='/login'><button className="btn view">Give a review</button></Link>
+                    }
                 </div>
             </div>
         </div> 
@@ -49,7 +53,10 @@ const Service = () => {
     }
 </div>
         <div className='text-center'>
-            <Link to={`/review/${_id}`}><button className='btn btn-primary mt-10'>Give Us A Review</button></Link>
+        {
+            user?.email ? <Link to={`/review/${_id}`}><button className="btn view">Give a review</button></Link>
+            : <Link to='/login'><button className="btn view">Give a review</button></Link>
+        }
         </div>
             </div>
 
