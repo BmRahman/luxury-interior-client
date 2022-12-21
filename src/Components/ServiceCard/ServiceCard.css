@@ -1,5 +1,5 @@
 .card{
-    border: 1px solid #EC6090;
+    border: 1px solid #e3af66;
     padding-top: 15px;
     padding-left: 10px;
     padding-right: 10px;
@@ -9,9 +9,9 @@
     height: 300px;
 }
 .view{
-    background-color: #EC6090;
-    color: #ffff;
+    background-color: #e3af66;
+    color: black;
 }
 .view:hover{
-    background-color: #6419E6;
+    background-color: #D99330;
 }

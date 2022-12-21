@@ -5,7 +5,7 @@ const ViewReview = () => {
     const [showReview, setShowReview] = ([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/reviews')
+        fetch('https://luxury-interior-server.vercel.app/reviews')
         .then(res => res.json())
         .then(data => setShowReview(data))
     }, [])

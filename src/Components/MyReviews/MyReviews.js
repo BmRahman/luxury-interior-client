@@ -8,14 +8,14 @@ const MyReviews = () => {
     const [myReviews, setMyReviews] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews?email=${user.email}`)
+        fetch(`https://luxury-interior-server.vercel.app/reviews?email=${user.email}`)
         .then(res => res.json())
         .then(data => setMyReviews(data))
     },[user?.email])
 
     const handleDelete = id => {
         // const proceed = window.alert('Do you want to delete this review?')
-        fetch(`http://localhost:5000/reviews/${id}`, {
+        fetch(`https://luxury-interior-server.vercel.app/reviews/${id}`, {
                 method: 'DELETE'
             })
             .then(res => res.json())

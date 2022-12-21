@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider';
-import './Header.css'
+// import './Header.css'
 import logo from '../../Assets/logo2.png';
 
 const Header = () => {
@@ -34,7 +34,7 @@ const Header = () => {
     return (
         <div>
             
-<div className="navbar header py-5">
+<div className="navbar header">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -49,14 +49,16 @@ const Header = () => {
         {
           user?.email ? <button onClick={handleLogout} className='btn log'>Log Out</button> :
           <>
-          <Link to='/login'><button className='btn log mr-3'>Login</button></Link>
-          <Link to='/register'><button className='btn log'>Sign Up</button></Link>
+          <div className='ml-3'>
+          <Link to='/login'><button className='btn btn-xs log mr-3 mb-2'>Login</button></Link>
+          <Link to='/register'><button className='btn btn-xs log'>Sign Up</button></Link>
+          </div>
           </>
         }
         </div>
       </ul>
     </div>
-    <Link to='/home'> <img src={logo} alt="" /> </Link>
+    <Link to='/home'> <img src={logo} alt="" className='w-[100px] lg:w-[150px]'/> </Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal p-0">
@@ -69,8 +71,8 @@ const Header = () => {
     {
       user?.email || user?.uid ? <button onClick={handleLogout} className='btn log'>Log Out</button> :
       <>
-      <Link to='/login'><button className='btn log mr-3'>Login</button></Link>
-      <Link to='/register'><button className='btn log'>Sign Up</button></Link>
+      <Link to='/login'><button className='btn btn-secondary log mr-3'>Login</button></Link>
+      <Link to='/register'><button className='btn btn-secondary log'>Sign Up</button></Link>
       </>
     }
   </div>

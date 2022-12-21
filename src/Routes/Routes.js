@@ -29,7 +29,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/services',
-                loader: () => fetch('http://localhost:5000/services'),
+                loader: () => fetch('https://luxury-interior-server.vercel.app/services'),
                 element: <Services></Services>
             },
             {
@@ -42,12 +42,12 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/review/:id',
-                loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`),
+                loader: ({params}) => fetch(`https://luxury-interior-server.vercel.app/services/${params.id}`),
                 element: <Review></Review>
             },
             {
                 path: '/services/:id',
-                loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`),
+                loader: ({params}) => fetch(`https://luxury-interior-server.vercel.app/services/${params.id}`),
                 element: <Service></Service>
             },
             {
@@ -57,7 +57,7 @@ export const router = createBrowserRouter([
             {
                 path: '/update/:id',
                 element: <Update></Update>,
-                loader: ({params}) => fetch(`http://localhost:5000/update/${params.id}`)
+                loader: ({params}) => fetch(`https://luxury-interior-server.vercel.app/update/${params.id}`)
             },
             {
                 path: '/blog',

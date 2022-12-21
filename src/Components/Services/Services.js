@@ -8,7 +8,7 @@ const Services = () => {
     console.log(allServices)
     return (
         <div className='my-10 mb-10'>
-            <h2 className='text-3xl lg:text-5xl text-center font-bold'>My <span className='my-title'>Services</span></h2>
+            <h2 className='text-3xl lg:text-5xl text-center font-bold'>My <span className='text-secondary'>Services</span></h2>
 
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-5 box my-10'>
                 {

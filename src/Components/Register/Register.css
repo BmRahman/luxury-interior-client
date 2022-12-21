@@ -1,12 +1,12 @@
 .sf{
     padding: 25px;
-    border: 1px solid #EC6090;
+    border: 1px solid #e3af66;
     border-radius: 20px;
 }
 .signup{
-    background-color: #EC6090;
-    color: #ffff;
+    background-color: #e3af66;
+    color: black;
 }
 .signup:hover{
-    background-color: #6419E6;
+    background-color: #D99330;
 }

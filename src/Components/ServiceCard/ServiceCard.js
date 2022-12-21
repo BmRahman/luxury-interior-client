@@ -9,10 +9,10 @@ const ServiceCard = ({service}) => {
 
     return (
         <div>
-            <div className="card w-full shadow-xl">
-                <figure><PhotoProvider>
-                    <img src={image} alt="Service" />                   
-                    </PhotoProvider></figure>
+            <div className="card w-full shadow-xl border border-secondary">
+                
+                    <img src={image} alt="Service" />                 
+                    
                     <div className="card-body">
                     <h2 className="card-title">{title}</h2>
                     <div className='flex justify-between mb-5'>
@@ -24,7 +24,7 @@ const ServiceCard = ({service}) => {
                         </div>
                     </div>
     <               div className="card-actions justify-end">
-                    <Link to={`/services/${_id}`}><button className="btn view">View Details</button></Link>
+                    <Link to={`/services/${_id}`}><button className="btn btn-secondary">View Details</button></Link>
                 </div>
             </div>
         </div>
